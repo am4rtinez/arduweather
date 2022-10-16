@@ -7,6 +7,6 @@ const router = Router()
 router.get('/sensors', sensorsController.getSensors)
 
 // Returns all sensors from one station by station_id.
-router.get('/stations/:id', sensorsController.getSensorsId)
+router.get('/sensors/:id', sensorsController.getSensorsId)
 
 export default router

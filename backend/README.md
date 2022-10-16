@@ -1,29 +1,15 @@
-# Endpoints
+# Implemented Endpoints
 
-## Estaciones
+## Stations
 
 GET /api/stations
 GET /api/stations/:id
-POST /api/stations
-PUSH /api/stations/:id
-DELETE /api/stations/:id
 
-## Tempreaturas
+## Sensors
 
-GET /api/temperature
-GET /api/temperature/:date
+GET /sensors
+GET /sensors/:id
 
-## Humedad
+## Units
 
-GET /api/humidity
-GET /api/humidity/:date
-
-## Presión atmosférica
-
-GET /api/pressure
-GET /api/pressure/:date
-
-## Luminosidad
-
-GET /api/brightness
-GET /api/brightness/:date
+GET /api/units
