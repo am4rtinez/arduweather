@@ -1,20 +1,25 @@
-import { Router } from 'express'		// Importa el metodo router de express.
+import { Router } from 'express'
 
-const router = Router()		// Ejecutamos el router.
+const router = Router()
 
 router.get('/', (req, res) => {
-	// res.render('api.pug', { title: 'API REST Gimnas', message: 'Hello there!', name: 'api' });
 	res.send('Hola Mundo!')
 })
 
-import tempRoute from './temperature.mjs'
-import humidityRoute from './humidity.mjs'
-import pressureRoute from './pressure.mjs'
-import brightnessRoute from './brightness.mjs'
+import stationsRoute from './stations.mjs'
+import sensorsRoute from './sensors.mjs'
+import unitsRoute from './units.mjs'
+// import tempRoute from './temperature.mjs'
+// import humidityRoute from './humidity.mjs'
+// import pressureRoute from './pressure.mjs'
+// import brightnessRoute from './brightness.mjs'
 
-router.use(tempRoute)
-router.use(humidityRoute)
-router.use(pressureRoute)
-router.use(brightnessRoute)
+router.use(stationsRoute)
+router.use(sensorsRoute)
+router.use(unitsRoute)
+// router.use(tempRoute)
+// router.use(humidityRoute)
+// router.use(pressureRoute)
+// router.use(brightnessRoute)
 
 export default router

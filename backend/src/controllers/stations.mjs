@@ -1,10 +1,14 @@
 import pool from "../helpers/database.mjs"
 
-const getBrightness = async (req, res, next) => {
+const getStations = async (req, res, next) => {
 	try {
-		const sql = 'SELECT * FROM brightness'
+		const sql = 'SELECT * FROM stations'
 		const result = await pool.query(sql)
-		res.status(200).json(result)
+		if (result.length > 0) {
+			res.status(200).json(result)
+		} else {
+			res.status(400).send({ message : 'No Data Found' }).end()
+		}
 	} catch (err){
 		// console.error(err)
 		res.status(400).send({
@@ -15,9 +19,9 @@ const getBrightness = async (req, res, next) => {
 	}
 }
 
-const getBrightnessDate = async (req, res, next) => {
+const getStationId = async (req, res, next) => {
 	try {
-		const sql = `SELECT * FROM brightness WHERE date = ${req.params.date}`
+		const sql = `SELECT * FROM stations WHERE id = ${req.params.id}`
 		const result = await pool.query(sql)
 		if (result.length > 0) {
 			res.status(200).json(result)
@@ -33,4 +37,4 @@ const getBrightnessDate = async (req, res, next) => {
 	}
 }
 
-export { getBrightness, getBrightnessDate }
+export { getStations, getStationId }

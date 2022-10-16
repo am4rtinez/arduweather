@@ -1,5 +1,3 @@
-// const mariadb = require('mariadb');
-// const config =  require('../config/database.config')
 import mariadb from 'mariadb'
 import config from '../config/database.config.mjs';
 

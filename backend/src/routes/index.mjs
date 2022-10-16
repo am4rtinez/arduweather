@@ -1,10 +1,9 @@
-import { Router } from 'express'		// Importa el metodo router de express.
-const router = Router()		// Ejecutamos el router.
+import { Router } from 'express'
+const router = Router()
 
-// Generacion de las rutas.
+// Route generation
 router.get('/', (req, res) => {
-	// res.render('index.pug', { title: 'Gimnas NODE JS', message: 'Hello there!', name: 'home'});
-	res.send('Hola Mundo!')
+	res.send('Hello world!') // This route serves the frontend page.
 })
 
 export default router

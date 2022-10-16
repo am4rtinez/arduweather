@@ -1,6 +1,6 @@
 import {} from 'dotenv/config'
 
-// Configuración para conectar la BD.
+// DB configuration
 const config = {
 	host : process.env.DB_HOST,
 	database: process.env.DB_NAME,
@@ -9,7 +9,5 @@ const config = {
 	password : process.env.DB_PASSWORD,
 	dialect : process.env.DB_DIALECT
 }
-
-// console.log(config)
 
 export default config;
